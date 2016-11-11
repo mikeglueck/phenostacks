@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'>
+
+<head>
+  <meta content='text/html;charset=UTF-8' http-equiv='content-type'>
+
+  <title>PhenoStacks - Cross-Sectional Cohort Phenotype Visualization</title>
+
+  <!-- Vendor Scripts -->
+  <script src="js/jquery/jquery-2.2.1.js" type="text/javascript"></script>
+  <script src="js/w2ui/w2ui-1.4.3.js" type="text/javascript"></script>
+  <script src="js/bootstrap/3.3.6/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="js/d3/d3-3.5.12.js" type="text/javascript"></script>
+
+  <script src="js/bootstrap-slider/bootstrap-slider.min.js" type="text/javascript"></script>
+  <script src="js/chroma/1.1.1/chroma.min.js" type="text/javascript"></script>
+  <script src="js/porterstemmer/porter-stemmer-1980.min.js" type="text/javascript"></script> <!-- https://github.com/kristopolous/Porter-Stemmer -->
+  <script src="js/tooltipster/js/jquery.tooltipster.min.js" type="text/javascript"></script>
+
+  <script src="js/d3.phenotype-icons.js" type="text/javascript"></script>
+  <script src="js/d3.phylogram/d3.phylogram-mg.js" type="text/javascript"></script>
+  <script src="js/d3.frequency-labels.js" type="text/javascript"></script>
+  <script src="js/d3.phenoblocks.js" type="text/javascript"></script>
+  <script src="js/d3.layout.cloud/d3.layout.cloud.js" type="text/javascript"></script>
+
+  <!-- Custom Scripts -->
+  <script src="js/utils.js" type="text/javascript"></script>
+  <script src="js/tree-filter.js" type="text/javascript"></script>
+  <script src="js/word-cloud.js" type="text/javascript"></script>
+  <script src="js/main.js" type="text/javascript"></script>
+  <script src="js/interface.js" type="text/javascript"></script>
+
+  <!-- Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400|Roboto:300,300italic,400,400italic,500,500italic|Kanit:100' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="icons/phenoicons.css"/>
+
+  <!-- Vendor Styles -->
+  <link rel="stylesheet" href="js/w2ui/w2ui-1.4.3.css"/>  <!-- Conflicts with Bootstrap BTN Styles -->
+  <link rel="stylesheet" href="js/bootstrap/3.3.6/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="js/bootstrap-slider/css/bootstrap-slider.min.css"/>
+  <link rel="stylesheet" href="js/rangeslider/2.1.1/rangeslider.css"/>
+  <link rel="stylesheet" href="js/tooltipster/css/tooltipster.css"/>
+  <link rel="stylesheet" href="css/frequency-tree.css"/>
+</head>
+
+<body>
+  <div id="layout" class="container-fluid" style="position: absolute; width: 100%; height: 100%;"></div>
+
+<script>
+  $(document).ready(function() {
+    initLayout();
+  });
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-69695426-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<div id="settings-panel">
+  <div class="row small settings-label" style="margin-bottom: 5px; margin-left: 10px">
+    Tree Levels: <span id="sld-tree-compress-value">1</span><br/>
+    <input type="range" min="0" max="12" step="1" value="1" id="sld-tree-compress" />
+  </div>
+<!-- 
+  <div class="row small settings-label" style="margin-bottom: 5px; margin-left: 10px">
+    Duplication: <span id="sld-tree-duplication-value">1</span><br/>
+    <input type="range" min="0" max="4" step="0.25" value="1" id="sld-tree-duplication" />
+  </div> -->
+
+  <div class="row small settings-label" style="margin-bottom: 5px; margin-left: 10px">
+    IC Weight: <span id="sld-tree-frequencyic-value">1</span><br/>
+    <input type="range" min="0" max="1" step="0.1" value="1" id="sld-tree-frequencyic" />
+  </div>
+
+  <div class="row small settings-label" style="margin-bottom: 5px; margin-left: 10px">
+    <input type="checkbox" id="btn-filter-empty"> Hide phenotypes without data
+  </div>
+</div>
+
+<div id="search-panel">
+  <div class="input-group">
+    <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+    <input type="text" class="form-control" placeholder="Search Phenotypes" id="search-input">
+  </div>
+</div>
+
+<!-- Search Results Panel -->
+<div id="search-results-panel">
+  <div class="list-group" id="search-results"></div>
+</div>

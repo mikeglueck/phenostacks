@@ -1,0 +1,493 @@
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400;
+  background-color: #eee;
+}
+
+/* Layout */
+#layout {
+  margin: 0;
+  padding: 0;
+}
+
+.w2ui-panel-content {
+  background-color: #eee !important;
+}
+
+/* Left Panel */
+#title-panel {
+  position: absolute;
+  top: 0;
+  height: 140px;
+
+  width: 100%;  /* Fill W2UI Panel */
+  overflow: hidden;
+
+  padding: 16px 16px 0 16px;
+  text-align: center;
+}
+
+#title-panel .title {
+  display: inline-block;
+  text-align: left;
+}
+
+#title-panel .title h1 {
+  padding: 0;
+  margin: 0;
+  line-height: 1em;
+  font-family: 'Kanit', sans-serif;
+  font-weight: bold;
+  font-size: 36pt;
+}
+
+#title-panel .title .version {
+  margin-top: -2px;
+  padding-left: 2px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 8pt;
+}
+
+#title-panel .title .dataset-name {
+  margin-top: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 10pt;
+}
+
+#title-panel .title-description {
+  margin-top: 5px 0 5px 0;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 9pt;
+}
+
+#summary-panel {
+  position: absolute;
+  top: 174px;
+  bottom: 0px;  /* Span remaining space */
+  height: auto;
+
+  width: 100%;  /* Fill W2UI Panel */
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  text-align: center;
+}
+
+
+/* Main Panel */
+#labels-panel {
+  position: absolute;
+  top: 0;
+  height: 140px;
+
+  width: 100%;  /* Fill W2UI Panel */
+  overflow: visible
+}
+
+.labels-headers-left {
+  position: absolute;
+  top: 140px;
+  height: 34px;
+
+  width: 100%;  /* Fill W2UI Panel */
+  overflow: visible;  /* For dropdowns */
+}
+
+.labels-headers-main {
+  position: absolute;
+  top: 140px;
+  height: 34px;
+
+  width: 100%;  /* Fill W2UI Panel */
+  overflow: visible;  /* For dropdowns */
+}
+
+.cohort-label {
+  text-anchor: start;
+  font-size: 8pt;
+}
+
+.labels-header {
+  display: inline-block;
+
+  height: 30px;
+  padding: 5px;
+  /*margin-right: 5px;*/
+
+  background-color: #ddd;
+  border-radius: 3px;
+}
+
+.labels-header .header {
+  padding-left: 5px;
+  font-family: "Roboto", sans-serif;
+  font-size: 11pt;
+  font-weight: 300;
+  font-style: italic;
+}
+
+#labels-header-summary {
+  position: absolute;
+  top: 0;
+  margin-left: 5px;
+  width: 353px;
+}
+
+#labels-header-layout {
+  position: absolute;
+  top: 0;
+  width: 300px;
+}
+
+#labels-header-phenotypes {
+  position: absolute;
+  top: 0;
+  width: 290px;
+}
+
+#labels-header-cohorts {
+  position: absolute;
+  top: 0;
+  width: 340px;
+}
+
+.dropdown-menu {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 300;
+  font-size: 9pt;
+}
+
+#chart-panel {
+  position: absolute;
+  top: 174px;
+  bottom: 0px;  /* Span remaining space */
+  height: auto;
+
+  width: 100%;  /* Fill W2UI Panel */
+  overflow-x: auto;
+  overflow-y: auto;
+
+  background-color: #fff;
+}
+
+/* Right Panel */
+
+#settings-panel {
+  position: absolute;
+  top: 0px;
+  height: 140px;
+
+  width: 100%;  /* Fill W2UI Panel */
+  overflow: visible;  /* For dropdowns */
+
+  padding: 16px 16px 0 16px;
+}
+
+.settings-label {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 8pt;
+  font-weight: 300;
+  line-height: 0.7em;
+}
+
+/* Override bootstrap-slider style */
+.slider.slider-horizontal {
+  width: 100px;
+}
+.slider-handle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: grey;
+  background-image: -webkit-linear-gradient(top, lightgrey 0%, grey 100%);
+  background-image: -o-linear-gradient(top, lightgrey 0%, grey 100%);
+  background-image: linear-gradient(to bottom, lightgrey 0%, grey 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='lightgrey', endColorstr='grey', GradientType=0);
+  filter: none;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  border: 0px solid transparent;
+}
+.slider.slider-horizontal .slider-handle {
+  margin-left: -5px;
+  margin-top: 0px;
+}
+.tooltip {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 9pt;
+}
+
+#search-panel {
+  position: absolute;
+  top: 140px;
+  height: auto;
+
+  width: 100%;  /* Fill W2UI Panel */
+  overflow: hidden;
+
+  padding: 0 16px 0 16px;
+  text-align: center;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 11pt;
+  font-weight: 300;
+  font-style: italic;
+}
+
+#search-panel .input-group {
+  width: 200px;
+}
+
+#search-results-panel {
+  position: absolute;
+  top: 174px;
+  bottom: 0px;  /* Span remaining space */
+  height: auto;
+
+  width: 100%;  /* Fill W2UI Panel */
+  padding: 0 0 0 16px;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Overrides list-group-item from Bootstrap */ 
+#search-results a.list-group-item {
+  padding: 3px 10px 3px 10px;
+  width: 200px;
+}
+
+
+
+
+/* PhenoBlocks */
+#summary-panel svg {
+  margin-left: 3px;
+  background-color: #fff;
+  /*border-radius: 10px;*/
+}
+
+text.label-phenoblocks {
+  text-anchor: middle;
+  font-family: "Roboto", sans-serif;
+  font-size: 10pt;
+  font-weight: 500;
+  font-style: italic;
+}
+
+text.label-phenoblocks-info {
+  text-anchor: left;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 7pt;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+text.label-patient {
+  font-size: 8.5pt;
+  fill: #000;
+}
+
+text.label-attr {
+  text-anchor: end;
+  font-size: 8.5pt;
+  fill: #000;
+}
+
+text.label-inner {
+  font-size: 7pt;
+  font-weight: 300;
+  fill: #666;
+  cursor: pointer;
+}
+
+text.label-leaf {
+  font-size: 8.5pt;
+  font-weight: 400;
+  fill: #000;
+  /*cursor: pointer;*/
+  cursor: default;
+}
+
+text.label-leaf-ic {
+  font-size: 6pt;
+  font-weight: 300;
+  fill: #aaa;
+  pointer-events: none;
+}
+
+text.label-cat {
+  font-size: 8pt;
+  font-weight: 300;
+  fill: #666;
+  cursor: default;
+}
+
+text.description {
+  font-family: "Roboto Condensed", sans-serif;
+}
+tspan.descr-pheno-label, tspan.descr-patient-label {
+  font-size: 8pt;
+  font-weight: 300;
+  fill: #CCC;
+}
+tspan.descr-pheno-name, tspan.descr-patient-name {
+  font-size: 14pt;
+  font-weight: 400;
+  fill: #333;
+}
+tspan.descr-pheno-caption, tspan.descr-patient-caption {
+  font-size: 8pt;
+  font-weight: 300;
+  fill: #666;
+}
+tspan.descr-pheno-obs-name, tspan.descr-patient-attr-name {
+  font-size: 9pt;
+  font-weight: 400;
+  fill: #333;
+}
+tspan.descr-pheno-obs-value, tspan.descr-patient-attr-value {
+  font-size: 9pt;
+  font-weight: 300;
+  fill: #333;
+}
+
+text.icon {
+  fill: #505050;
+}
+
+path.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1;
+}
+
+circle.node.inner {
+  fill: #eee;
+  stroke: #ddd;
+  cursor: pointer;
+}
+
+circle.node.inner.collapsed {
+  fill: #ccc;
+  stroke: #bbb;
+}
+
+circle.node.cat {
+  fill: #ccc;
+  stroke: node;
+  pointer-events: none;
+}
+
+
+/* Frequency Chart */
+circle.freq.unknown {
+  fill: lightgrey;
+  stroke: grey;
+  opacity: 0.4;
+  stroke-width: 1;
+}
+
+circle.freq.present {
+/* V1 green
+  fill: rgb(74, 144, 51);
+  stroke: rgb(0, 107, 0);*/
+/* V2 Green
+  fill: #579a30;
+  stroke: #097d2f;*/
+/* V3 Purple */
+  fill: #83568e;
+  stroke: #5c3267;
+  stroke-width: 1;
+}
+
+circle.freq.absent {
+/* V1 Orange
+  fill: rgb(223, 134, 59);
+  stroke: rgb(190, 75, 0);*/
+/* V2 Orange
+  fill: #f88a00;
+  stroke: #ac530f;*/
+/* V3 Aqua*/
+  fill: #7cdcc9;
+  stroke: #0b8272;
+  stroke-width: 1;
+}
+
+circle.freq.presentanc {
+/* V1 Green
+  fill: limegreen;
+  stroke: rgb(0, 107, 0);*/
+/* V2 Green
+  fill: #9eb328;
+  stroke: #579a30;*/
+/* V3 same as present with circle
+  fill: url(#presentanc);
+  stroke: #097d2f;*/
+/* V4 purple same as present*/
+  fill: url(#presentanc);
+  stroke: #5c3267;
+  stroke-width: 1;
+}
+
+.presentanc_dot {
+  shape-rendering: crispEdges;
+  fill: #fff;
+  stroke: #fff;
+}
+
+.presentanc_fill {
+/* V3 green
+  fill: #579a30;*/
+  fill: #83568e;
+  stroke: none;
+}
+
+circle.freq.absentanc {
+/*  fill: gold;
+  stroke: rgb(190, 75, 0);*/
+  fill: #fb9f00;
+  stroke: #f88a00;
+  stroke-width: 1;
+}
+
+circle.freq.highlight {
+  stroke-width: 2;
+}
+
+
+/* TOOLTIPSTER */
+.tooltipster-default {
+  border-radius: 2px; 
+  border: 1px solid #555;
+  background: #666;
+  color: #eee;
+}
+
+.tooltipster-default .tooltipster-content {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 8pt;
+  font-weight: 300;
+  line-height: 1.0em;
+  padding: 3px 4px;
+  overflow: hidden;
+}
+
+.tooltipster-arrow-top span, .tooltipster-arrow-top-right span, .tooltipster-arrow-top-left span {
+  border-left: 3px solid transparent !important;
+  border-right: 3px solid transparent !important;
+  border-top: 3px solid;
+  bottom: -3px;
+}
+.tooltipster-arrow-top .tooltipster-arrow-border, .tooltipster-arrow-top-right .tooltipster-arrow-border, .tooltipster-arrow-top-left .tooltipster-arrow-border {
+  border-left: 4px solid transparent !important;
+  border-right: 4px solid transparent !important;
+  border-top: 4px solid;
+  bottom: -3px;
+}
