@@ -5,7 +5,7 @@ This project is currently under development. The source code provided here shoul
 
 * For information, resources, and an online demo of the tool, please visit [www.phenostacks.org](http://www.phenostacks.org).
 
-* PhenoStacks uses the [Human Phenotype Ontology](www.human-phenotype-ontology.org) to structure data for visualization.
+* PhenoStacks uses the [Human Phenotype Ontology](http://www.human-phenotype-ontology.org) to structure data for visualization.
 
 
 ## Publication
