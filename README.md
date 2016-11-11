@@ -1,5 +1,4 @@
 # PhenoStacks: Cross-Sectional Cohort Phenotype Comparison Visualizations
-Research prototype visual analysis tool for comparison of patient phenotypes of cross-sectional cohorts, based on the Human Phenotype Ontology
 
 This project is currently under development. The source code provided here should be considered alpha-code for proof of concept and for reference purposes. A documented and modularized re-write is underway and will be posted here when it is available.
 
