@@ -48,7 +48,6 @@ d3.frequencyLabels = function() {
   }
 
   var my = function() {
-
   }
 
   my.id = function(value) {
@@ -184,11 +183,11 @@ d3.frequencyLabels = function() {
     for (var i = 0, n = cohorts.length; i < n; i++) {
       var cohort = cohorts[i];
 
-      var cohortRectangles = labels.selectAll('rect.'+ cohort.id)
-        .data( _data[i], function(d) { return d.id +"cohort"+ cohort.id; } );
+      var cohortRectangles = labels.selectAll('rect.'+ cssclass(cohort.id))
+        .data( _data[i], function(d) { return d.id +"cohort"+ cssclass(cohort.id); } );
 
       cohortRectangles.enter().append('rect')
-        .attr("class", cohort.id)
+        .attr("class", cssclass(cohort.id))
         .attr('width', 9)
         .attr('height', 120)
         .attr("transform", function(d) { return ['translate(', d.x-4.5, d.y-120, ')'].join(' '); })
@@ -215,12 +214,11 @@ d3.frequencyLabels = function() {
       cohortRectangles.exit()
         .remove();
 
-
-      var cohortBackground = labels.selectAll('use.'+ cohort.id)
-        .data( _data[i], function(d) { return d.id +"cohort"+ cohort.id; } );
+      var cohortBackground = labels.selectAll('use.'+ cssclass(cohort.id))
+        .data( _data[i], function(d) { return d.id +"cohort"+ cssclass(cohort.id); } );
 
       cohortBackground.enter().append('use')
-        .attr("class", cohort.id)
+        .attr("class", cssclass(cohort.id))
         .style("pointer-events", "none")
         .attr('xlink:href', '#pointer')
         .attr("transform", function(d) { return ['translate(', d.x, d.y, ')'].join(' '); })
@@ -237,11 +235,11 @@ d3.frequencyLabels = function() {
         .remove();
 
 
-      var cohortLabels = labels.selectAll('text.label-patient.'+ cohort.id)
-        .data( _data[i], function(d) { return d.id +"cohort"+ cohort.id; } );
+      var cohortLabels = labels.selectAll('text.label-patient.'+ cssclass(cohort.id))
+        .data( _data[i], function(d) { return cssclass(d.id) +"cohort"+ cssclass(cohort.id); } );
 
       cohortLabels.enter().append('text')
-        .attr("class", "label-patient "+ cohort.id)
+        .attr("class", "label-patient "+ cssclass(cohort.id))
         .style("pointer-events", "none")
         .attr('transform', function(d) { return 'translate('+ d.x +' '+ d.y +') rotate(-90)'; })
         .attr("dx", 5)
@@ -259,12 +257,12 @@ d3.frequencyLabels = function() {
 
 
       var attrNames = Object.keys(_data[i][0].attr).filter(function(a) { return (a !== 'clusterorder' && a !== 'cluster' && a !== 'aCount' && a !== 'pCount' && a !== 'uCount'); });
-      var attrLabels = labels.selectAll('text.label-attr.'+ cohort.id)
-        .data( attrNames, function(a) { return "cohort"+ cohort.id + a; } );
+      var attrLabels = labels.selectAll('text.label-attr.'+ cssclass(cohort.id))
+        .data( attrNames, function(a) { return "cohort"+ cssclass(cohort.id) + a; } );
         ;
 
       attrLabels.enter().append('text')
-        .attr('class', function(a) { return ['label-attr', cohort.id].join(" "); })
+        .attr('class', function(a) { return ['label-attr', cssclass(cohort.id)].join(" "); })
         .style("pointer-events", "none")
         .attr('dy', 3)
         .attr('transform', function(a, k) { return ['translate(', _data[i][0].x-10, _data[i][0].y-105+k*10, ')'].join(" "); })
@@ -281,12 +279,12 @@ d3.frequencyLabels = function() {
 
       // Draw attribute circles
       _data[i].forEach(function(p) {
-        var cohortAttr = labels.selectAll('circle.attr.'+ cohort.id +'.'+ cssclass(p.id, 'pat'))
-          .data( attrNames, function(a) { return 'attr'+a+p.id + cohort.id; })
+        var cohortAttr = labels.selectAll('circle.attr.'+ cssclass(cohort.id) +'.'+ cssclass(p.id, 'pat'))
+          .data( attrNames, function(a) { return 'attr'+a+cssclass(p.id) + cssclass(cohort.id); })
           ;
 
         cohortAttr.enter().append('circle')
-          .attr('class', function(a) { return ['attr', cohort.id, cssclass(p.id, 'pat')].join(" "); })
+          .attr('class', function(a) { return ['attr', cssclass(cohort.id), cssclass(p.id, 'pat')].join(" "); })
           //.style("pointer-events", "none")
           .attr('title', function(a) { return a +': '+ mapUnknownValues(p.attr[a]); })
           .attr('r', 3.5)

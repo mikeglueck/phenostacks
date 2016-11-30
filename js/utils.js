@@ -198,7 +198,8 @@ function mapUnknownValues(val) {
 }
 
 function cssclass(val, prefix) {
-  return prefix + val.replace(" ", "_");
+  prefix = prefix || "";
+  return prefix + val.replace(/[^\w]/g, '_');
 }
 
 
